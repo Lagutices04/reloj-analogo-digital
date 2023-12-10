@@ -1,0 +1,72 @@
+.reloj {
+    position: relative;
+    /**posicion del reloj es relativa */
+    width: 200px;
+    /** definira el ancho del reloj en pixeles*/
+    height: 200px;
+    /** la altura del reloj en pixeles*/
+   background-image: url(/img/reloj.png);
+   /** la imagen de fondo del reloj sin manecillas*/
+    background-size: 100% 100%;
+    /** fondo del tamaño del reloj, el 100% significa que es su tamaño horizontal 
+    sea igual al ancho del elemento y su tamaño vertical sea igual a la altura del elementp */
+}
+
+.aguja {
+    position: absolute;
+    /** las agujas estaran ubicadas en una posicion fija,osea en el cenrtro del reloj */
+    width: 25%;
+    /** ancho del espacio que ocupara las agujas */
+    height: 2px;
+    /** alto del espacio que ocupara las agujas */
+    background: black;
+    /** color de fondo */
+    transform-origin: 100%;
+    /**Esto establece el punto de origen para las transformaciones del elemento, 
+    como rotación, escala y traslación. En este caso, 
+    el punto de origen se coloca en el borde derecho del elemento. */
+}
+
+.hora {
+    top: 50%;
+    /** la manecilla ocupara un 50% del espacio */
+    margin-top: -1px;
+    /** controla el espacio (margen) antes del borde superior de un elemento 
+    el -1 reducira el espacio predeterminado.*/
+    left: 50%;
+    /** hacia la derecha 50 porciento*/
+    margin-left: -25%;
+    /** la margen derecha disminuira un 25 porciento */
+    transform-origin: 100% 50%;
+    /**Esto establece el punto de origen para las transformaciones del elemento, 
+    como rotación, escala y traslación. En este caso, 
+    el punto de origen se coloca en el borde derecho del elemento.  */
+}
+
+.minuto {
+    top: 50%;
+    /**hacia arriba */
+    margin-top: -1px;
+    /** margen superior*/
+    left: 50%;
+    /**derecha */
+    margin-left: -25%;
+    /** margen derecha disminuye 25 poricento*/
+    transform-origin: 100% 50%;
+    /** Esto establece el punto de origen para las transformaciones del elemento, como rotación, escala y traslación. En este caso, el punto de origen se coloca en el borde derecho del elemento. */
+}
+
+.segundo {
+    top: 50%;
+    /** hacia arriba*/
+    margin-top: -1px;
+    /** margen suoerior disminuira en un pixel*/
+    left: 50%;
+    /**derecha */
+    margin-left: -25%;
+    /**margen derecha  */
+    transform-origin: 100% 50%;
+    /**Esto establece el punto de origen para las transformaciones del elemento, como rotación, escala y traslación. En este caso, el punto de origen se coloca en el borde derecho del elemento.  */
+    transition: all 1s;
+    /**se mueve esa manecilla cada segundo */
+}
